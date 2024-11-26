@@ -1,0 +1,92 @@
+.mlist1{
+    max-width: 500px;
+    height: 420px;
+    background: url('../../assets/img/login.png') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+  }
+  
+  .mlist2{
+    text-align: center;
+  }
+.log{
+    font-size: 40px;
+    font-weight: bold;
+}
+.good{
+    margin-top: 20px;
+}
+.input{
+    background-color: rgb(224, 224, 224);
+    border-radius: 30px;
+    margin-top: 30px;
+    // height: 50px;
+    border: none;
+    padding-left: 15px;
+    // width: 83%;
+    outline: none;
+    width: 340px;
+    height: 50px;
+  }
+.button{
+    margin-top: 20px;
+    width: 340px;
+    height: 50px;
+}
+ .button2{
+   margin-top: 15px;
+ }
+ 
+
+ 
+
+
+//  alert css 
+
+.main{
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+  z-index: 30;
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  margin-top: -208px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.submain{
+  background-color: #FFEBEB;
+  height: 55px;
+  width: 55px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.submain2{
+  height: 40px;
+  width: 40px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.submain3{
+  background-color: #F1AEAE;
+  height: 30px;
+  width: 30px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon{
+  color: white;
+  font-size: 20px;
+  // z-index: 100;
+  // position: absolute;
+  // margin-top: -160px;
+}

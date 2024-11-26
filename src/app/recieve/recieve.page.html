@@ -1,0 +1,130 @@
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-list class="mlst1Ab">
+      <img class="imgAB" src="../../assets/img/download (2).png" alt="">
+    </ion-list>
+    <ion-list class="reci">
+      <h1 class="to"><b>To recieve</b></h1>
+      <p class="my">My Orders</p>
+    </ion-list>
+    <ion-list>
+      <i class="fa fa-cog fa2" aria-hidden="true"></i>
+      <i class="fa fa-bars fa2" aria-hidden="true"></i>
+      <i class="fa fa-credit-card fa2" aria-hidden="true"></i>
+    </ion-list>
+  </ion-list>
+  <ion-list class="btncls">
+  <!-- <button class="first" (click)="firstbtn()"
+    [ngClass]="{'btn1': selectedbtn === 'first' ? true:false , 'btn2' : selectedbtn === 'second' ? true:false}">COMPLETE</button>
+    <button class="second" (click)="secondbtn()"[ngClass]="{'btn1': selectedbtn === 'second' ? true:false , 'btn2' : selectedbtn === 'first' ? true:false}">PENDING</button>
+  </ion-list> -->
+  <button class="first" (click)="firstbtn()" [ngClass]="{'btn1': selectedbtn === 'first', 'btn2': selectedbtn === 'second'}">COMPLETE</button>
+    <button class="second" (click)="secondbtn()" [ngClass]="{'btn1': selectedbtn === 'second', 'btn2': selectedbtn === 'first'}">PENDING</button>
+  </ion-list>
+    <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" size-sm="12" size-xs="12"  *ngFor="let i of pendingItems">
+        <ion-list class="mainlist" *ngIf="!data" >
+          <ion-list class="sublist1" > 
+                <img class="img1" src="{{i.selectedImage ||i.itmimg}}" alt="">
+                <i class="fa fa-trash-o fa2" aria-hidden="true" (click)="clearData(i)"></i>
+          </ion-list>
+          <ion-list class="sublist2" >
+            <p class="odr">{{i.itmname}}</p>
+            <p class="odr2">Standard Delivery</p>
+            <p class="odr3">Packed</p>
+          </ion-list>
+          <ion-list class="sublist3" >
+            <p class="item">{{i.contr}} items</p>
+            <ion-button class="btn" fill="solid" (click)="trackItem(i)">Track</ion-button>
+          </ion-list>
+        </ion-list>
+        
+      </ion-col>
+      <ion-col size-md="6" size-sm="12" size-xs="12" *ngFor="let i of completeItems" >
+        <ion-list class="mainlist" *ngIf="data">
+          <ion-list class="sublist1">
+                <img class="img1A1" src="{{i.selectedImage ||i.itmimg}}" alt="">  
+          </ion-list>
+          <ion-list class="sublist2">
+            <p class="odr">Order #92287157</p>
+            <p class="odr2">Standard Delivery</p>
+            <p class="odr3">Delivered
+              <span class="fa-stack fa-lg icon">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-check fa-stack-1x fa-inverse"></i>
+              </span>
+            </p>
+          </ion-list>
+          <ion-list class="sublist3">
+            <p class="item">{{i.contr}} items</p>
+            <ion-button class="btn" fill="outline">Review</ion-button>
+          </ion-list>
+        </ion-list>
+      </ion-col>
+      <!-- <ion-col size-md="6" size-sm="12" size-xs="12" *ngIf="data">
+        <ion-list class="mainlist">
+          <ion-list class="sublist1">
+            <ion-list class="multiimg">
+              <ion-list class="mimg1">
+                <img class="img1" src="../../assets/img/IMG-20240326-WA0042.jpg" alt="">
+              </ion-list>
+              <ion-list class="mimg1">
+                <img class="img1" src="../../assets/img/IMG-20240326-WA0035.jpg" alt="">
+              </ion-list>
+            </ion-list>
+            <ion-list class="multiimg">
+              <ion-list class="mimg1">
+                <img class="img1" src="../../assets/img/IMG-20240326-WA0042.jpg" alt="">
+              </ion-list>
+              <ion-list class="mimg1">
+                <img class="img1" src="../../assets/img/IMG-20240326-WA0035.jpg" alt="">
+              </ion-list>
+            </ion-list>
+          </ion-list>
+          <ion-list class="sublist2">
+            <p class="odr">Order #92287157</p>
+            <p class="odr2">Standard Delivery</p>
+            <p class="odr3">Delivered
+              <span class="fa-stack fa-lg icon">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-check fa-stack-1x fa-inverse"></i>
+              </span>
+            </p>
+          </ion-list>
+          <ion-list class="sublist3">
+            <p class="item">4 items</p>
+            <ion-button class="btn" fill="outline">Review</ion-button>
+          </ion-list>
+        </ion-list>
+      </ion-col>
+      <ion-col size-md="6" size-sm="12" size-xs="12" *ngIf="data">
+        <ion-list class="mainlist">
+          <ion-list class="sublist1">
+
+            <ion-list class="mimg1A">
+              <img class="img1A" src="../../assets/img/IMG-20240326-WA0050.jpg" alt="">
+            </ion-list>
+
+          </ion-list>
+          <ion-list class="sublist2">
+            <p class="odr">Order #92287157</p>
+            <p class="odr2">Standard Delivery</p>
+            <p class="odr3">Delivered
+              <span class="fa-stack fa-lg icon">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-check fa-stack-1x fa-inverse"></i>
+              </span>
+            </p>
+          </ion-list>
+          <ion-list class="sublist3">
+            <p class="item">1 item</p>
+            <ion-button class="btn" fill="outline">Review</ion-button>
+          </ion-list>
+        </ion-list>
+      </ion-col> -->
+    </ion-row>
+  </ion-grid>
+<ion-list class="botom"></ion-list>
+<app-footer></app-footer>
+</ion-content>

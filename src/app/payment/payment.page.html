@@ -1,0 +1,204 @@
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <h1 class="pay"><b>Payment</b></h1>
+  </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" size-sm="6" size-xs="12" *ngFor="let a of adres;">
+        <ion-list class="list1">
+          <h4 class="ship"><b>Shipping Address</b></h4>
+          <p class="text">{{a.address}} {{a.city}}  {{a.postcode}}</p>
+        </ion-list>
+      </ion-col>
+      <ion-col size-md="6" size-sm="6" size-xs="12" >
+        <ion-list class="list1">
+          <h4 class="ship"><b>Contact Information </b></h4>
+          <p class="text">
+          
+          {{shippingAddress.contact}}<br>
+          {{shippingAddress.eamil}},
+        </p>
+          <i id="open-modal5" class="fa fa-pencil" aria-hidden="true"></i>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+
+    <ion-row>
+      <ion-col size-md="6" size-sm="12" size-xs="12">
+        <ion-list>
+          <h3 class="item"><b>Items</b></h3>
+          <h3 class="n2"><b>{{this.value}}</b></h3>
+          <p class="vouch">Add Voucher</p>
+        </ion-list>
+        <ion-list class="imglist" *ngFor="let b of user;">
+            <ion-list class="notification-badge">
+              <ion-list class="mlst1Ab">
+              <img class="img" src="{{b.selectedImage ||b.itmimg}}" alt="">
+            </ion-list>
+            <span class="badge"><b>{{b.contr}}</b></span>
+          </ion-list>
+          
+          <ion-list class="lorm">
+          <h6 class="lorem"><b>Name:</b>{{b.itmname}}</h6>
+          <p class="price"><b>Price:</b>{{b.total}}</p>
+        </ion-list>
+        <ion-list class="lorm2">
+        <h6 class="lorem"><b>Color:</b>{{b.color}}</h6>
+          <h6 class="lorem"><b>Size:</b>{{b.size}}</h6>
+        </ion-list>
+        </ion-list>
+      </ion-col>
+      <ion-col size-md="6" size-sm="12" size-xs="12">
+        <ion-list>
+          <h1 class="pay"><b>Shipping Options</b></h1>
+          <ion-list class="stand">
+            <button class="tick" (click)="selectShipping('standard')"></button>
+            <h2 class="Standard"><b>Standard</b></h2>
+            <h6 class="days">5-7 days</h6>
+            <h2 class="free"><b>Free</b></h2>
+          </ion-list>
+          <ion-list class="exp">
+            <button class="tick1"  (click)="selectShipping('express')"></button>
+            <h2 class="Standard"><b>Express</b></h2>
+            <h6 class="days2">1-2 days</h6>
+            <h2 class="free"><b>${{this.exprice}}</b></h2>
+          </ion-list>
+          
+        </ion-list>
+        <ion-list>
+          <h1 class="pay"><b>Payment Method</b></h1>
+          <!-- <i id="open-modal2" class="fa fa-pencil faa1" aria-hidden="true"></i> -->
+        </ion-list>
+        <!-- <h5 class="card"><b>Card</b></h5> -->
+        <ion-list class="mstr">
+          <ion-list class="imglist">
+            <img class="master" src="../../assets/img/card.png" alt="">
+            <i class="fa fa-cog  icon" aria-hidden="true"></i>
+          </ion-list>
+          <ion-list class="codelist">
+            <!-- <ion-list class="no">
+              <span class="str">{{shippingAddress.contact}}</span>
+            </ion-list> -->
+            <!-- <ion-list class="no">
+              <span  class="str">{{shippingAddress.contact}}</span>
+            </ion-list> -->
+            <!-- <ion-list class="no">
+               <span  class="str">{{shippingAddress.contact}}</span> -->
+              <!-- <p class="code">{{shippingAddress.contact}}</p> -->
+            <!-- </ion-list>  -->
+            <p class="code">{{payment.first}}</p>
+            <!-- <p class="code">{{payment.first}}</p>
+            <p class="code">{{payment.first}}</p>
+            <p class="code">{{payment.first}}</p> -->
+          </ion-list>
+          <ion-list class="name">
+            <p class="amand">{{payment.secnd}}</p>
+            <p  class="date">{{payment.date}}</p>
+          </ion-list>
+        </ion-list>
+        <ion-button id="open-modal3" class="save2">+</ion-button>
+        <ion-list class="total">
+          <h1 class="tot"><b>Total ${{this.bagtotal}}</b></h1>
+          <ion-button (click)="recive(user)" color="dark" class="but">Pay</ion-button>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list class="botom"></ion-list>
+  
+
+  <ion-modal trigger="open-modal5" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
+    <ng-template>
+      <ion-content class="ion-padding">
+        <ion-list class="main">
+          <h1 class="shi"><b>Contact Information
+          </b></h1>
+        </ion-list>
+        <ion-list>
+          <ion-list>
+            <h5 class="con">Contact No</h5>
+            <input [(ngModel)]="shippingAddress.contact" class="add" type="text">
+            <h5 class="con">Email</h5>
+            <input [(ngModel)]="shippingAddress.eamil" class="add" type="text">
+            
+          </ion-list>
+        </ion-list>
+        <ion-button (click)="save()"  class="save">Save Changes </ion-button>
+        
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal trigger="open-modal2" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
+    <ng-template>
+      <ion-content class="ion-padding">
+        <ion-list class="main">
+          <h1 class="shi"><b>Payment Methods</b></h1>
+        </ion-list>
+        <!-- <ion-list class="mstr">
+          <ion-list class="imglist">
+            <img class="master" src="../../assets/img/card.png" alt="">
+            <i class="fa fa-cog  icon" aria-hidden="true"></i>
+          </ion-list>
+          <ion-list class="codelist">
+            <ion-list class="no">
+              <span *ngFor="let a of numb" class="str">{{a.star}}</span>
+            </ion-list>
+            <ion-list class="no">
+              <span *ngFor="let a of numb1" class="str">{{a.star}}</span>
+            </ion-list>
+            <ion-list class="no">
+              <span *ngFor="let a of numb2" class="str">{{a.star}}</span>
+            </ion-list>
+            <p class="code">1579</p>
+          </ion-list>
+          <ion-list class="name">
+            <p class="amand">Amanda Morgan</p>
+            <p class="date">12/22</p>
+          </ion-list>
+        </ion-list>
+        <ion-button  class="save2">+</ion-button> -->
+        <!-- model -->
+        
+        
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal trigger="open-modal3" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
+    <ng-template>
+      <ion-content class="ion-padding">
+        <ion-list class="main">
+          <h1 class="shi"><b>Add Card</b></h1>
+        </ion-list>
+        <ion-list>
+          <h5>Card Holder</h5>
+          <input [(ngModel)]="payment.secnd" class="inp" type="text" placeholder="Required">
+        </ion-list>
+        <ion-list>
+          <h5>Card Number</h5>
+          <input [(ngModel)]="payment.first" class="inp" type="text" placeholder="Required">
+        </ion-list>
+        <ion-list class="validlist">
+          <ion-list class="valid">
+            <ion-list>
+              <h5 class="card1">Valid</h5>
+              <input [(ngModel)]="payment.date" class="inp" type="text" placeholder="Required">
+            </ion-list>
+          </ion-list>
+          <ion-list class="valid">
+            <ion-list>
+              <h5 class="card1">CVV</h5>
+              <input  class="inp" type="text" placeholder="Required">
+            </ion-list>
+          </ion-list>
+        </ion-list>
+
+        <ion-button (click)="paymnt()" class="save3">Save Changes</ion-button>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+  <app-footer></app-footer>
+</ion-content>

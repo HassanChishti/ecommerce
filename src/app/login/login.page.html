@@ -1,0 +1,32 @@
+<ion-content [fullscreen]="true">
+  <ion-list class="mlist1"></ion-list>
+  <ion-list class="mlist2">
+    <h1 class="log">Login</h1>
+    <h5 class="good">Good to see you back! <ion-icon name="heart"></ion-icon></h5>
+    <input class="input" type="text" placeholder="Email">
+  </ion-list>
+  <ion-list class="mlist2">
+  <ion-button  class="button">Done</ion-button>
+  <ion-alert 
+trigger="present-alert" 
+class="custom-alert" 
+message="You reached out maximum amount of attempts. Please, try later." 
+[buttons]="alertButtons"
+cssClass="custom-alert-text"
+>
+<ion-list class="main">
+<ion-list class="submain">
+<ion-list class="submain2">
+<ion-list class="submain3">
+<ion-icon class="icon" name="alert-outline"></ion-icon>
+</ion-list>
+</ion-list>
+</ion-list>
+</ion-list>
+</ion-alert>
+</ion-list>
+<ion-list class="mlist2">
+  <ion-button fill="clear" class="button2">Cancel</ion-button>
+</ion-list>
+ 
+</ion-content>

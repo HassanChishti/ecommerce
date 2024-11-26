@@ -1,0 +1,104 @@
+.mtext{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.setng{
+    font-size: 30px;
+    font-weight: bold;
+}
+.set2{
+    margin-top: -4px;
+    margin-left: 5px;
+}
+.icon2{
+    // float: right;
+    font-size: 17px;
+    margin-top: 28px;
+    color: #004CFF;
+    margin-inline-end: 5px;
+    z-index: 1;
+    margin-left: -20px;
+  }
+.mlst1A {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 100%;
+    height: 78px;
+    width: 78px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+  }
+  
+  .img {
+    height: 73px;
+    width: 70px;
+  }
+  .inputlist{
+    text-align: center;
+  }
+  
+  .input{
+    background-color: rgb(224, 224, 224);
+    border-radius: 30px;
+    margin-top: 30px;
+    width: 340px;
+    height: 50px;
+    border: none;
+    padding-left: 15px;
+    outline: none;
+  }
+
+  .button{
+    width: 340px;
+    height: 7%;
+    margin-top: 50px;
+    border-radius: 15px;
+  }
+  .maintabbar {
+    border: solid 1px;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+  
+  }
+  .tabbaricon {
+    color: black;
+  }
+  
+  .hr {
+    border: 2px solid rgb(190, 190, 190);
+    width: 38%;
+    margin-top: 50px;
+    background-color: rgb(189, 187, 187);
+  
+  }
+  
+  ion-tab-bar {
+    bottom: 20px;
+    position: relative;
+    border-radius: 16px;
+    width: 92%;
+    margin: 0 auto;
+  }
+  
+  ion-tab-button {
+    --color: var(--ion-color-medium);
+    --color-selected: var(--ion-color-primary);
+  
+    &::before {
+      background-color: transparent;
+      display: block;
+      content: "";
+      margin: 0 auto;
+      width: 20px;
+      height: 2px;
+    }
+  
+    &.tab-selected::before {
+      background-color: var(--ion-color-primary);
+    }
+  }

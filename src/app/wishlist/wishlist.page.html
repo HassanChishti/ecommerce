@@ -1,0 +1,33 @@
+<ion-content [fullscreen]="true">
+  <ion-content>
+    <ion-list>
+      <h1 class="wish"><b>Whishlist</b></h1>
+      <!-- <p class="quan">{{this.quantity}}</p> -->
+    </ion-list>
+    <ion-grid>
+      <ion-row>
+        <ion-col size-md="6" size-sm="12" size-xs="12" *ngFor="let list of user">
+          <ion-list class="main">
+            <ion-list class="imglist">
+              <img (click)="pro(list)" class="img2" src="{{list.itmimg}}" alt="">
+              <button  class="btn22" tabindex="0">
+                <ion-icon (click)="removeFromWishlist(list)" class="h122" slot="icon-only" name="heart" 
+                ></ion-icon>
+              </button>
+            </ion-list>
+            <ion-list class="text">
+              <h6>{{list.itmname}}</h6>
+              <h1><b>${{list.itmprice}}</b></h1>
+              <p class="item">{{this.contr}} items</p>
+              <!-- <h5 class="pink">{{list.pnk}}</h5> -->
+              <!-- <h5 class="m">{{list.siz}}</h5> -->
+              
+            </ion-list>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-list class="botom"></ion-list>
+  </ion-content>
+  <app-footer></app-footer>
+</ion-content>

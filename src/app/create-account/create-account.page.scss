@@ -1,0 +1,72 @@
+.mlist1{
+  height: 370px;
+  background: url('../../assets/img/Screenshot\ 2024-03-21\ 142455.png') ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  max-width: 600px;
+  margin: auto;
+}
+.Create{
+  font-weight: bold;
+  font-size: 45px;
+  margin-top: 100px;
+  margin-left: 15%;
+}
+.camera{
+  font-size: -5%;
+  color: cornflowerblue;
+  margin-left: 15%;
+  margin-top: 30px; 
+  border-radius: 60%; 
+  width: 80px; 
+  border: 6px dotted cornflowerblue;
+  height: 80px;
+}
+
+.inputlist{
+  text-align: center;
+}
+.input{
+  background-color: rgb(224, 224, 224);
+  border-radius: 30px;
+  margin-top: 30px;
+  width: 340px;
+  height: 50px;
+  border: none;
+  padding-left: 15px;
+  outline: none;
+}
+.input1{
+  background-color: rgb(224, 224, 224);
+  border-radius: 30px;
+  margin-top: 30px;
+  height: 50px;
+  width: 340px;
+  border: none;
+  padding-left: 45px;
+  outline: none;
+}
+.button{
+  width: 340px;
+  height: 7%;
+  margin-top: 50px;
+  border-radius: 15px;
+}
+.button2{
+ margin-top: 15px;
+}
+.eye-icon {
+  color: blue;
+  font-size: 35px;
+  margin-left: -43px;
+  margin-top: 38px;
+  float: left;
+  position: absolute;
+  cursor: pointer;
+  
+}
+.password-input{
+  margin: auto;
+  width: 370px;
+}

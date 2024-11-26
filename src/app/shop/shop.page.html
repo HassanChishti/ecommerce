@@ -1,0 +1,173 @@
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <h1 class="shop"><b>Shop</b></h1>
+    <ion-searchbar class="sea"></ion-searchbar>
+    <swiper-container loop="true" pagination="none" [breakpoints]="{
+        '280':{
+          'slidesPerView':1,
+          'spaceBetween': 10,
+        },
+        '480':{
+          'slidesPerView':2,
+          'spaceBetween': 10,
+        },
+        '780':{
+          'slidesPerView':4,
+          'spaceBetween': 10,
+        },
+        '1080':{
+          'slidesPerView':4,
+          'spaceBetween': -20,
+        },
+}">
+      <swiper-slide *ngFor="let img of banr">
+        <ion-list class="banner">
+          <img class="banimg" src="{{img.banrimg}}" alt="">
+        </ion-list>
+      </swiper-slide>
+    </swiper-container>
+  </ion-list>
+  <ion-list>
+    <h1 class="cata">Catagories</h1>
+    <h2 class="see">See All</h2>
+  </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="4" size-sm="4" size-xs="6" *ngFor="let card of catagori1">
+        <ion-card class="card">
+          <ion-list>
+            <img (click)="catagri(card)" class="img1" alt="Silhouette of mountains" src="{{card.cataimg1}}" />
+            <img (click)="catagri(card)" class="img2" alt="Silhouette of mountains" src="{{card.cataimg2}}" />
+          </ion-list>
+          <ion-list class="imglist">
+            <img (click)="catagri(card)" class="img1" alt="Silhouette of mountains" src="{{card.cataimg3}}" />
+            <img (click)="catagri(card)" class="img2" alt="Silhouette of mountains" src="{{card.cataimg4}}" />
+          </ion-list>
+          <ion-list>
+            <p class="clothing"><b>{{card.itmname}}</b></p>
+            <h5 class="no">{{card.itmprice}}</h5>
+          </ion-list>
+        </ion-card>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+  <ion-list class="mhader">
+    <h3 class="hadr">Top Products</h3>
+  </ion-list>
+  <ion-list class="mbaner">
+    <swiper-container [breakpoints]="{
+          '280':{
+            'slidesPerView':4.5,
+            'spaceBetween': 10,
+          },
+          '480':{
+            'slidesPerView':4.5,
+            'spaceBetween': 10,
+          },
+          '780':{
+            'slidesPerView':7.5,
+            'spaceBetween': 10,
+          },
+          '1080':{
+            'slidesPerView':7,
+            'spaceBetween': -50,
+          },
+  }">
+      <swiper-slide *ngFor="let img of top1">
+        <ion-list class="mlst1Ab">
+          <img (click)="pro(img)" class="img" src="{{img.itmimg}}" alt="">
+        </ion-list>
+      </swiper-slide>
+    </swiper-container>
+  </ion-list>
+  <ion-list>
+    <h1 class="cata">New Items</h1>
+    <h2 class="see">See All
+      <span class="fa-stack fa-lg icon2">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-long-arrow-right fa-stack-1x fa-inverse"></i>
+      </span>
+    </h2>
+  </ion-list>
+  <ion-list class="storie">
+    <swiper-container [breakpoints]="{
+          '280':{
+            'slidesPerView':2.5,
+            'spaceBetween': 5,
+          },
+          '480':{
+            'slidesPerView':3.2,
+            'spaceBetween': 5,
+          },
+          '780':{
+            'slidesPerView':5.2,
+            'spaceBetween': 20,
+          },
+          '1080':{
+            'slidesPerView':6.2,
+            'spaceBetween': 10,
+          },
+        }">
+      <swiper-slide *ngFor="let data of items1">
+        <ion-list class="mcol">
+          <img (click)="pro(data)" class="colimg1" src="{{data.itmimg}}" alt="">
+          <button (click)="toggleWishlist(data)" class="btn22" tabindex="0">
+            <ion-icon class="h122" slot="icon-only" name="heart-outline" 
+            [name]="isInWishlist(data) ? 'heart' : 'heart-outline'" [color]="isInWishlist(data) ? 'danger' : 'primary'"
+            ></ion-icon>
+          </button>
+        </ion-list>
+        
+        <h5>{{data.itmname}}</h5>
+        <h1><b>${{data.itmprice}}</b></h1>
+      </swiper-slide>
+    </swiper-container>
+    
+  </ion-list>
+  <ion-list>
+    <h1 class="flash"><b>Flash Sale</b></h1>
+    <h1 class="size1">5</h1>
+    <h1 class="size2">3</h1>
+    <h1 class="size3">0</h1>
+    <ion-icon class="alarm" name="alarm-outline"></ion-icon>
+  </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="2" size-sm="4" size-xs="4" *ngFor="let img of sale1">
+        <ion-list class="mcol">
+          <img (click)="pro(img)" class="colimg1" src="{{img.itmimg}}" alt="">
+          <button (click)="toggleWishlist(img)" class="btn22" tabindex="0">
+            <ion-icon class="h122" slot="icon-only" name="heart-outline" 
+            [name]="isInWishlist(img) ? 'heart' : 'heart-outline'" [color]="isInWishlist(img) ? 'danger' : 'primary'"
+            ></ion-icon>
+          </button>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list>
+    <h1 class="flash"><b>Just For You <ion-icon class="star" name="star"></ion-icon></b></h1>
+  </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="col1" size-md="2" size-sm="6" size-xs="6" *ngFor="let data of just1">
+        <ion-list class="mcol">
+          <img (click)="pro(data)" class="colimg1" src="{{data.itmimg}}" alt="">
+          <button (click)="toggleWishlist(data)" class="btn22" tabindex="0">
+            <ion-icon class="h122" slot="icon-only" name="heart-outline" 
+            [name]="isInWishlist(data) ? 'heart' : 'heart-outline'" [color]="isInWishlist(data) ? 'danger' : 'primary'"
+            ></ion-icon>
+          </button>
+        </ion-list>
+        <h5>{{data.itmname}}</h5>
+        <h1><b>${{data.itmprice}}</b></h1>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list class="botom"></ion-list>
+
+  <app-footer></app-footer>
+  
+</ion-content>

@@ -1,0 +1,123 @@
+<ion-content [fullscreen]="true">
+  <ion-icon class="back" (click)="go2()" name="arrow-back-circle-outline"></ion-icon>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" size-sm="6" size-xs="12">
+        <swiper-container thumbs-swiper=".Swiper" *ngFor="let image of images">
+          <swiper-slide>
+            <img [src]="image"/>
+          </swiper-slide>
+        </swiper-container>
+      </ion-col>
+      <ion-col size-md="6" size-sm="6" size-xs="12">
+        <ion-list>
+          <ion-list class="mflash">
+            <h1 class="flash">${{ user.itmprice }}</h1>
+            <span class="fa-stack fa-lg size0">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-share fa-stack-1x fa-inverse share"></i>
+            </span>
+            <h1 class="size2">6</h1>
+            <h1 class="size3">0</h1>
+            <ion-icon class="alarm" name="alarm-outline"></ion-icon>
+          </ion-list>
+
+
+
+          <ion-list class="mflash1">
+            <p class="flash2">$30,00</p>
+            <p class="flash3">-20%</p>
+          </ion-list>
+          <p class="detals">{{ user?.itmname }}</p>
+        </ion-list>
+        <ion-list>
+          <h1 class="color">Color Options</h1>
+          <ion-list class="s9">
+            <p><b>Select Color: {{ selectedColor }}</b></p>
+            <ion-icon class="color-icon i2 brown" [class.selected]="selectedColor === 'Brown'" name="ellipse" (click)="onSelectColor('Brown')"></ion-icon>
+            <ion-icon class="color-icon i3 pink" [class.selected]="selectedColor === 'Darkcyan'" name="ellipse" (click)="onSelectColor('Darkcyan')"></ion-icon>
+            <ion-icon class="color-icon i4 yellow" [class.selected]="selectedColor === 'Pink'" name="ellipse" (click)="onSelectColor('Pink')"></ion-icon>
+            <ion-icon class="color-icon i5 gray" [class.selected]="selectedColor === 'Gray'" name="ellipse" (click)="onSelectColor('Gray')"></ion-icon>
+            <ion-icon class="color-icon i6 berry" [class.selected]="selectedColor === 'Berry'" name="ellipse" (click)="onSelectColor('Berry')"></ion-icon>
+        </ion-list>
+        
+
+
+            <!-- <ion-list class="clrmain">
+            <button class="col" 
+                    *ngFor="let c of col" 
+                    [ngStyle]="{ 'background-color': c.color }" 
+                    (click)="onSelectColor(c.color)"></button>
+          </ion-list> -->
+        </ion-list>
+        <ion-list>
+          <h1 class="color">Size</h1>
+        </ion-list>
+        <swiper-container class="mySwiper" [breakpoints]="{
+          '360':{
+            'slidesPerView':5,
+            'spaceBetween':10,
+          },
+          '760':{
+            'slidesPerView':5,
+            'spaceBetween':10,
+          },
+          '1221':{
+            'slidesPerView':5,
+            'spaceBetween':10,
+          },}"> 
+          <swiper-slide>
+         <button class="btn" [class.selected]="selectedSize === 'S'" fill="clear"   (click)="onSelectSize('S')">S</button>
+         </swiper-slide>
+     
+          <swiper-slide>
+           <button class="btn" [class.selected]="selectedSize === 'M'"  (click)="onSelectSize('M')">M</button>
+         </swiper-slide>
+         <swiper-slide>
+           <button class="btn" [class.selected]="selectedSize === 'L'" (click)="onSelectSize('L')">L</button>
+         </swiper-slide>
+         <swiper-slide>
+           <button class="btn" [class.selected]="selectedSize === 'XL'" (click)="onSelectSize('XL')">XL</button>
+         </swiper-slide>
+         <swiper-slide>
+           <button class="btn" [class.selected]="selectedSize === 'XXL'" (click)="onSelectSize('XXL')">XXL</button>
+         </swiper-slide>
+         <swiper-slide>
+           <button class="btn" [class.selected]="selectedSize === 'XXXL'" (click)="onSelectSize('XXXL')">XXXL</button>
+         </swiper-slide>
+
+        </swiper-container>
+        <!-- <ion-list>
+          <button class="btn" 
+                  [class.selected]="selectedSize === 'b'"
+                  fill="outline" 
+                  shape="round"
+                  color="danger"
+                  (click)="onSelectSize('m')">m</button>
+        </ion-list>
+         -->
+        <ion-list>
+          <ion-list style="float: left;">
+            <h1 class="color">Quantity</h1>
+          </ion-list>
+          <ion-list>
+            <ion-icon class="puls" name="add-circle-outline"></ion-icon>
+            <h1 class="btn2">{{user.quantity}}</h1>
+            <ion-icon class="mins" name="remove-circle-outline"></ion-icon>
+          </ion-list>
+        </ion-list>
+        <ion-list>
+          <ion-item lines="none">
+            <button class="btn22">
+              <ion-icon class="heart" slot="icon-only" name="heart"></ion-icon>
+            </button>
+            <ion-button [disabled]="isButtonDisabled()" (click)="go(user)" class="addcrt" color="dark">Add to cart</ion-button>
+            <ion-button class="buy" color="primary">Buy now</ion-button>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list class="botom"></ion-list>
+<app-footer></app-footer>
+</ion-content>

@@ -1,0 +1,21 @@
+<ion-content [fullscreen]="true">
+  <ion-list class="mlist1">
+    <h1 class="Create">Create <br> Account</h1>
+    <ion-icon class="camera" name="camera-outline"></ion-icon>
+  </ion-list> 
+  <ion-list class="inputlist">
+    <input class="input" type="text" placeholder="Email" [(ngModel)]="formData.email" (ngModelChange)="onFormDataChange()">
+  </ion-list>
+  <ion-list class="inputlist">
+    <div class="password-input">
+      <input class="input" type="{{ showPassword ? 'text' : 'password' }}" placeholder="Password" [(ngModel)]="formData.password" (ngModelChange)="onFormDataChange()">
+      <ion-icon name="{{ showPassword ? 'eye-off-outline' : 'eye-outline' }}" class="eye-icon" (click)="togglePasswordVisibility()"></ion-icon>
+    </div>
+  </ion-list>
+  <ion-list class="inputlist">
+    <ion-button class="button" [disabled]="disableButton" (click)="submitForm()">Done</ion-button>
+  </ion-list>
+  <ion-list class="inputlist">
+    <ion-button (click)="home()" fill="clear" class="button2">Cancel</ion-button>
+  </ion-list>
+</ion-content>

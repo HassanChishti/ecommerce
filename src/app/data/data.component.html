@@ -1,0 +1,10 @@
+<!-- <input>
+<button style="height: 25px; width: 100px; background-color: brown;">hello</button> -->
+
+<ion-list>
+  <input [(ngModel)]="pro" type="text" placeholder="Enter data">
+  <button (click)="addData()" style="height: 25px; width: 100px; background-color: brown;">Submit</button>
+  <ion-list id="data-container">
+    <ion-list *ngFor="let item of dataList" class="data-item">{{ item }}</ion-list>
+    </ion-list>
+</ion-list>

@@ -1,0 +1,466 @@
+.pay{
+    margin-left: 18px;
+    float: left;
+}
+.list1{
+    height: 100px;
+    border-radius: 10px;
+    width: 90%;
+    margin-left: 5%;
+    background-color: #F9F9F9;
+    margin-block-start: 15px;
+}
+.fa{
+    margin-right: 30px;
+    background-color: #004BFE;
+    border-radius: 30px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 30px;
+    width: 30px;
+    float: right;
+    cursor: pointer;
+}
+.text{
+    float: left;
+    margin-top: -2px;
+    margin-left: 15px;
+}
+.ship{
+    margin-left: 15px;
+}
+.n2{
+    float: left;
+    margin-left: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 30px;
+    height: 30px;
+    width: 30px;
+    background-color: #E5EBFC;
+}
+.item{
+    float: left;
+    margin-left: 18px;
+}
+.vouch{
+    float: right;
+    color: #004BFE;
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+    border: solid 1px  #004BFE;
+}
+.img {
+    height: 53px;
+    width: 50px;
+    border-radius: 100px;
+  }
+  .mlst1Ab {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 100%;
+    height: 58px;
+    width: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 10px;
+
+  }
+  .notification-badge {
+    height: 108px;
+    width: 84px;
+    float: left;
+
+  }
+  
+  .badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 10px;
+    background-color: #E5EBFC; 
+    color: black;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 15px;
+    font-weight: bold;
+    z-index: 10;
+  }
+  .imglist{
+    height: 100px;
+    border-radius: 10px;
+    width: 90%;
+    margin-left: 5%;
+    margin-block-start: 15px;
+}
+.lorm{
+  margin-top: -10px;
+}
+.lorm2{
+  margin-top: -25px;
+  background-color: transparent;
+}
+.lorem{
+    float: left;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+.price{
+    float: right;
+    margin-top: -5px;
+}
+.stand{
+    height: 70px;
+
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 10px;
+    background-color: #E5EBFC;
+}
+.tick{
+  font-size: 17px;
+  color: white;
+  margin-top: 13px;
+  margin-left: 7px;
+  height: 30px;
+float: left;
+  width: 30px;
+  border-radius: 30px;
+  border: solid 5px white;
+  // background-color: #004BFE;
+}
+.tick:focus{
+background-image: url(../../assets/img/check.png);
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+height: 35px;
+width: 35px;
+border-radius: 35px;
+}
+.Standard{
+    margin-top: 20px;
+    margin-left: 7px;
+    float: left;
+}
+.days{
+    float: left;
+    height: 30px;
+    margin-top: 17px;
+    margin-left: 10px;
+    border-radius: 6px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 75px;
+    background-color: #F5F8FF;
+    color: #004BFE;
+}
+.free{
+    float: right;
+    margin-right: 10px;
+}
+.exp{
+    height: 70px;
+    margin-top: 10px;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 10px;
+    background-color: #F9F9F9;
+}
+.tick1{
+  margin-top: 13px;
+  margin-left: 7px;
+  height: 30px;
+float: left;
+  width: 30px;
+  border-radius: 30px;
+  border: solid 5px white;
+  background-color: #EFEFEF;
+}
+.tick1:focus{
+background-image: url(../../assets/img/check.png);
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+height: 35px;
+width: 35px;
+border-radius: 35px;
+}
+.days2{
+    float: left;
+    height: 30px;
+    margin-top: 17px;
+    margin-left: 10px;
+    border-radius: 6px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 75px;
+    background-color: #F5F8FF;
+    color: #004BFE;
+}
+.faa1{
+    margin-right: 30px;
+    margin-top: 20px;
+    background-color: #004BFE;
+    border-radius: 30px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 30px;
+    width: 30px;
+    float: right;
+}
+.card{
+    background-color: #E5EBFC;
+    height: 40px;
+    width: 80px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #004BFE;
+    margin-left: 15px;
+    margin-top: -1px;
+    border-radius: 20px;
+}
+.total{
+    height: 80px;
+    margin-top: 40px;
+    background-color: #F3F3F3;
+    width: 100%;
+}
+.tot{
+    font-size: 30px;
+    float: left;
+    margin-left: 15px;
+}
+.but{
+    color: white;
+    float: right;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-right: 20px;
+    width: 135px;
+}
+.botom{
+    height: 100px;
+}
+.maintabbar2 {
+    border: solid 1px;
+    position: fixed;
+    width: 92%;
+    height: 70px;
+  }
+.maintabbar {
+    border: solid 1px;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+  }
+  .tabbaricon {
+    color: black;
+  }
+  ion-tab-bar {
+    bottom: 20px;
+    position: relative;
+    border-radius: 16px;
+    width: 92%;
+    margin: 0 auto;
+  }
+  ion-tab-button {
+    --color: var(--ion-color-medium);
+    --color-selected: var(--ion-color-primary);
+    &::before {
+      background-color: transparent;
+      display: block;
+      content: "";
+      margin: 0 auto;
+      width: 20px;
+      height: 2px;
+    }
+    &.tab-selected::before {
+      background-color: var(--ion-color-primary);
+    }
+  }
+  //model css
+
+  ion-modal {
+    --height: 75%;
+  }
+
+  .main{
+    width: 110%;
+    margin-top: -14px;
+    height: 70px;
+    margin-left: -12px;
+    background-color: #F8FAFF;
+  }
+  .shi{
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+  .con{
+    margin-top: 5px;
+  }
+  .ind{
+    float: left;
+    font-size: 20px;
+    margin-top: -5px;
+    color: #E7E8EB;
+  }
+  .arr{
+    float: right;
+    font-size: 30px;
+    color: #e1e2e2;
+    margin-top: -5px;
+  }
+  .add{
+    height: 45px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: #F1F4FE;
+  }
+  .save{
+    width: 100%;
+  }
+  //model
+
+  .shi{
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+  
+  .save2{
+    float: right;
+    width: 11%;
+    margin-top: 40px;
+    margin-right: 10px;
+    font-size: 30px;
+    height: 200px;
+  }
+  .mstr{
+    height: 200px;
+    width: 85%;
+    float: left;
+    margin-top: 40px;
+    background-color: #E5EBFC;
+    border-radius: 10px;
+  }
+  .master{
+    background-color: transparent;
+    float: left;
+    height: 80px;
+    width: 120px;
+  }
+  .icon{
+    float: right;
+    background-color: #d2ddfc;
+    height: 45px;
+    width: 45px;
+    border-radius: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+    margin-top: 20px;
+    font-size: 25px;
+  }
+  .imglist{
+    background-color: transparent;
+  }
+  .codelist{
+height: 35px;
+width: 100%;
+background-color: transparent;
+  }
+  .no{
+    background-color: transparent;
+    height: 20px;
+    width: 70px;
+    margin-top: -5px;
+    float: left;
+    margin-inline-start: 10px;
+  }
+ .str{
+    float: left;
+    margin-inline-end: 10px;
+    font-size: 20px;
+  }
+  .code{
+    float: left;
+    margin-left: 15px;
+    margin-top: -0px;
+    
+  }
+  .name{
+    background-color: transparent;
+  }
+  .amand{
+    margin-top: -0px;
+    margin-left: 10px;
+    float: left;
+  }
+  .date{
+    float: right;
+    margin-top: -0px;
+    margin-right: 10px;
+  }
+
+  //add to cart modal
+
+  .shi{
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+  .inp{
+    background-color: #F1F4FE;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+  }
+  .validlist{
+    height: 110px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .inp1{
+    background-color: #F1F4FE;
+    border: none;
+    outline: none;
+    width: 45%;
+    float: left;
+    height: 45px;
+    border-radius: 5px;
+  }
+  input[type="text"]::placeholder {
+    color: #9EB4E8;
+}
+.valid{
+  height: 110px;
+  width: 48%;
+  float: left;
+}
+.card1{
+  margin-top: 5px;
+}
+  .save3{
+    width: 100%;
+    margin-top: 10px;
+    height: 45px;
+  }

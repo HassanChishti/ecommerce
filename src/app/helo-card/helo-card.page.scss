@@ -1,0 +1,46 @@
+ .sublist{
+    height: 730px;
+    margin-top: -200px;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+ }
+
+.mainlist{
+    max-width: 500px;
+    height: 320px;
+    border-bottom-right-radius: 90%;
+    background-color: #004BFE;
+    margin: auto;
+}
+
+.mslider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mlst1 {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 50px;
+    height: 710px;
+    width: 340px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.img1 {
+    margin-top: -10px;
+    width: 100%;
+}
+
+.helo {
+    margin-top: 80px;
+}
+
+.button {
+    width: 83%;
+    height: 7%;
+    margin-top: 20px;
+}

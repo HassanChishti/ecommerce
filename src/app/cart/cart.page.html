@@ -1,0 +1,121 @@
+<ion-content [fullscreen]="true">
+  <ion-icon class="back" (click)="go()" name="arrow-back-circle-outline"></ion-icon>
+  <ion-list class="mhader1">
+    <h1 class="hadr1">Cart</h1>
+    <p class="counter1">{{this.value}}</p>
+  </ion-list>
+  <ion-list class="storie1">
+    <swiper-container [breakpoints]="{
+    '280':{
+      'slidesPerView':1,
+      'spaceBetween': 10,
+    },
+    '510':{
+      'slidesPerView':1,
+      'spaceBetween': 10,
+    },
+    
+    '780':{
+      'slidesPerView':2,
+      'spaceBetween': 10,
+    },
+    '1080':{
+      'slidesPerView':2,
+      'spaceBetween': 10,
+    },
+  }">
+      <swiper-slide>
+        <ion-list class="mhader2a">
+          <h1>Shipping Address</h1>
+          {{shippingAddress.address}}{{shippingAddress.city}},{{shippingAddress.postcode}}, 
+          <span id="open-modal4" class="fa-stack fa-lg icon2">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+          </span>
+        </ion-list>
+      </swiper-slide>
+
+    </swiper-container>
+  </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" size-sm="6" size-xs="12">
+        <ion-card style="box-shadow: none;" *ngFor="let pro of user; let i=index">
+          <ion-list class="main">
+            <ion-item lines="none">
+              <ion-list class="imglist">
+                <img class="img2" src="{{pro.selectedImage ||pro.itmimg}}" alt="">
+                <i class="fa fa-trash-o fa2" aria-hidden="true" (click)="deleteItem(i)"></i>
+              </ion-list>
+              <ion-list class="text">
+              <div class="Mdel">
+                <h6><b>Name:</b>{{pro.itmname }}</h6>
+                <!-- <h5><b>Total:</b>{{pro.total}}</h5> -->
+              </div>
+                <div class="Msize">
+                <p><b>Size:</b>{{pro.size}}</p>
+                <p class="procolor"><b>Color:</b>{{pro.color}}</p>
+                </div>
+                <p class="price"><b>${{pro.itmprice }}</b></p>
+                
+                <p class="conter">
+                <ion-icon class="add"  (click)="increment(i)"  name="add-circle-outline"></ion-icon>
+                <span class="qua">{{pro.contr}}</span>
+                <ion-icon  class="mins" (click)="decrement(i)" name="remove-circle-outline"></ion-icon>
+              </p>
+              
+              </ion-list>
+            </ion-item>
+          </ion-list>
+        </ion-card>
+       
+      </ion-col>
+      <ion-col size-md="6" size-sm="6" size-xs="12">
+        <ion-list class="payment">
+          <ion-list class="total">
+            <h1 class="tot"><b>Grand Total</b></h1>
+            <h1 class="tot2"><b>${{this.Grandtotal}}</b></h1>
+          </ion-list>
+          <hr class="hr">
+          <ion-list class="total">
+            <h1 class="tot"><b>Shipping</b></h1>
+            <h1 class="tot2"><b>${{this.Shipping}}</b></h1>
+          </ion-list>
+          <hr class="hr">
+          <ion-list class="total">
+            <h1 class="tot"><b>Bag Total</b></h1>
+            <h1 class="tot2"><b>${{this.BagTotal}}</b></h1>
+          </ion-list>
+        </ion-list>
+        <ion-button (click)="pay(user)" class="buy" color="primary">Checkout</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-modal trigger="open-modal4" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
+    <ng-template>
+      <ion-content class="ion-padding">
+        <ion-list class="mainmodl">
+          <h1 class="shi"><b>Shipping Adress</b></h1>
+        </ion-list>
+        <ion-list>
+          
+          <ion-list>
+            <h5 class="con">Adress</h5>
+            <input class="addmodl" type="text" [(ngModel)]="shippingAddress.address">
+            <h5 class="con">Town/City</h5>
+            <input class="addmodl" type="text" [(ngModel)]="shippingAddress.city">
+            <h5 class="con">Postcode</h5>
+            <input class="addmodl" type="text" [(ngModel)]="shippingAddress.postcode">
+          </ion-list>
+        </ion-list>
+        <ion-button (click)="save()" class="save">Save Changes </ion-button>
+        
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  
+  <ion-list class="botom"></ion-list>
+  <app-footer></app-footer>
+</ion-content>
